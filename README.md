@@ -6,9 +6,12 @@ This also let you see a list of item name within the basket and filter the list 
 
 To Run:
 
-`git clone https://github.com/abhi90g/Grocery-App.git`  
-`npm install`  to get all dependencies
-`cd Grocery-App`
+`git clone https://github.com/abhi90g/Grocery-App.git`   
+
+`npm install`  to get all dependencies  
+
+`cd Grocery-App`  
+
 `npm start`  
      
   
