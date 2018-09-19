@@ -12,13 +12,14 @@ export default class ItemBasket extends Component {
 
     }
 
-    getAllItemsInBasket(items, remove) {
-        // console.log('getAllItemsInBasket - ', items)
+    getAllItemsInBasket(items) {
+        console.log('getAllItemsInBasket - ', items)
         let removeThis = this.state.removeItem;
 
         return (
             Object.keys(items).map(function getAllItemsInBasket(itemid) {
                 let item = items[itemid];
+                console.log(item);
                 return (
                     <Row
                         rowItem={item}

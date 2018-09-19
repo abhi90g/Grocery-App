@@ -7,9 +7,9 @@ export default class AddItems extends Component {
 
         this.state = {
             id: '',
-            itemName: 'Apple',
+            itemName: '',
             quantity: '1',
-            selectedType: 'common'
+            selectedType: ''
         };
 
         this.handleChanges = this.handleChanges.bind(this);

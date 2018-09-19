@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import AddItems from './components/add-items';
 import ItemBasket from './components/item-basket';
+import FilterGroceryList from './components/filter-data';
 import './styles/css/App.css';
 
 class App extends Component {
@@ -27,24 +28,26 @@ class App extends Component {
         });
     }
 
-    removeSingleItem (itemId) {    
+    removeSingleItem(itemId) {
         let list = this.state.itemList;
-        // console.log('removeSingleItem - ', list[itemId]);
         delete list[itemId];
         this.itemsInList(list);
-      }
+    }
 
     render() {
         let listItems = this.state.itemList
         console.log(listItems);
-        console.log(JSON.stringify(listItems));
+        // console.log(JSON.stringify(listItems));
         return (
             <div className='container'>
                 <AddItems
                     itemAdded={this.itemAdded} />
+                <FilterGroceryList
+                    data={listItems} />
                 <ItemBasket
                     itemList={listItems}
                     removeSingleItem={this.removeSingleItem} />
+
             </div>
         )
     }

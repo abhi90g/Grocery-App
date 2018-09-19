@@ -1,0 +1,47 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  
+    .modal-main {
+      position:fixed;
+      background: white;
+      width: 80%;
+      height: auto;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      border-radius: 10px;
+
+      >div>form>fieldset{
+        margin: 20px auto;
+      }
+
+      .filter-list{
+          >div>.list-group{
+            width: 80%;
+            margin: auto;
+          }
+      }
+
+      .modal-close {
+        margin: 20px auto;
+        display: block;
+        width: 30%;
+        height: 22px;
+        background-color: cornsilk;
+      }
+    }
+  }
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
