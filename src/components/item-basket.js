@@ -38,20 +38,16 @@ export default class ItemBasket extends Component {
 
 
         return (
-            <div>
-                <table border='1'>
-                    <tbody>
+            <div className='basket'>
+                <table>
+                    <thead>
                         <tr>
-                            <td>
-                                <h1> Items in Basket </h1>
-                            </td>
-                            <td>
-
-                            </td>
+                            <th colSpan='2'> <h1> Items in Basket </h1> </th>
+                            {/* <th></th> */}
                         </tr>
-
+                    </thead>
+                    <tbody>
                         {(Object.keys(eachItem).length !== 0) ? listOfItems : <NoItemsInList />}
-
                     </tbody>
                 </table>
             </div>

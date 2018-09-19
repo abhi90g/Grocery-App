@@ -1,0 +1,58 @@
+$centered: center center;
+fieldset {
+    width: 80%;
+    margin: auto;
+
+    .header-text {
+        text-align: center;
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: x-large;
+    }
+
+    .item-name {
+        float: left;
+
+        .item-name-text{
+            font-family: $font-title;
+        }
+
+        .item-name-value{
+            display: flex;
+            border-radius: 5px;
+            height: 20px;
+        }
+    }
+
+    .item-quantity {
+        overflow: hidden;
+        margin-left: 40%;
+
+        .item-quantity-text{
+            font-family: $font-title;
+        }
+
+        .item-quantity-value {
+            display: flex;
+            border-radius: 5px;;
+            height: 20px;
+        }
+    }
+
+    .item-category-text {
+        font-family: $font-main;
+    }
+
+    .category-list{
+        list-style-type: none;
+
+        .category-name{
+            font-family: $font-title;
+        }
+    }
+
+    
+}
+
+
+

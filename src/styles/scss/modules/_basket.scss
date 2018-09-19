@@ -1,0 +1,57 @@
+.basket{
+    width: 80%;
+    margin: 20% auto;
+
+    >table {
+        width: 100%;
+        
+        > thead,
+        > tbody{
+            >tr {
+                &:hover {
+                    background-color: darken(adjust-hue($color-backgrounds, -20deg), 10%);
+                  }
+            
+                  &:nth-child(even) {
+                    background-color: $color-even-cells;
+            
+                    &:hover {
+                      background-color: opacify($color-even-cells, .3);
+                    }
+                  }
+                  > td {
+                    padding: 10px;
+                    border-bottom: 1px dotted $blue;
+                  }
+            }
+        }
+
+        >thead >tr {
+            background-color: $blue;
+            color: $color-backgrounds;
+            &:hover {
+              background-color: complement($blue);
+            }
+            >th {
+              border-bottom :0;
+            }
+          }
+
+          >tbody{
+              .items{
+
+                .item-detail>ul{
+                    list-style-type: none;
+                }
+                .item-remove{
+                    width: 70%;
+                    margin: auto;
+                    display: block;
+                    height: 7vh;
+                }
+              }
+          }
+        
+    }
+
+}

@@ -1,5 +1,115 @@
-body {
-  background: red;
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Merriweather|Josefin+Slab|Oswald|Bree+Serif);
+@import url("https://fonts.googleapis.com/css?family=Abhaya+Libre:500|Montserrat|Open+Sans:400,600");
+html {
+  font-size: 100%;
+}
+
+fieldset {
+  width: 80%;
+  margin: auto;
+}
+fieldset .header-text {
+  text-align: center;
+  font-family: Merriweather, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+}
+fieldset .item-name {
+  float: left;
+}
+fieldset .item-name .item-name-text {
+  font-family: "Abhaya Libre", serif;
+}
+fieldset .item-name .item-name-value {
+  display: flex;
+  border-radius: 5px;
+  height: 20px;
+}
+fieldset .item-quantity {
+  overflow: hidden;
+  margin-left: 40%;
+}
+fieldset .item-quantity .item-quantity-text {
+  font-family: "Abhaya Libre", serif;
+}
+fieldset .item-quantity .item-quantity-value {
+  display: flex;
+  border-radius: 5px;
+  height: 20px;
+}
+fieldset .item-category-text {
+  font-family: Merriweather, Helvetica, sans-serif;
+}
+fieldset .category-list {
+  list-style-type: none;
+}
+fieldset .category-list .category-name {
+  font-family: "Abhaya Libre", serif;
+}
+
+button {
+  border-radius: 5px;
+}
+
+.add-to-basket {
+  width: 40%;
+  height: 35px;
+}
+.add-to-basket:hover {
+  background-color: #548C27;
+}
+
+.reset-basket {
+  height: 35px;
+  margin-left: 10px;
+  width: 10%;
+}
+.reset-basket:hover {
+  background-color: #D14348;
+}
+
+.basket {
+  width: 80%;
+  margin: 20% auto;
+}
+.basket > table {
+  width: 100%;
+}
+.basket > table > thead > tr:hover,
+.basket > table > tbody > tr:hover {
+  background-color: #dfc5b2;
+}
+.basket > table > thead > tr:nth-child(even),
+.basket > table > tbody > tr:nth-child(even) {
+  background-color: rgba(255, 186, 0, 0.2);
+}
+.basket > table > thead > tr:nth-child(even):hover,
+.basket > table > tbody > tr:nth-child(even):hover {
+  background-color: rgba(255, 186, 0, 0.5);
+}
+.basket > table > thead > tr > td,
+.basket > table > tbody > tr > td {
+  padding: 10px;
+  border-bottom: 1px dotted #0076A3;
+}
+.basket > table > thead > tr {
+  background-color: #0076A3;
+  color: #EEE8D6;
+}
+.basket > table > thead > tr:hover {
+  background-color: #a32d00;
+}
+.basket > table > thead > tr > th {
+  border-bottom: 0;
+}
+.basket > table > tbody .items .item-detail > ul {
+  list-style-type: none;
+}
+.basket > table > tbody .items .item-remove {
+  width: 70%;
+  margin: auto;
+  display: block;
+  height: 7vh;
 }
 
 /*# sourceMappingURL=App.css.map */

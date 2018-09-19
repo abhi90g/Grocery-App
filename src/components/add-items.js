@@ -37,11 +37,12 @@ export default class AddItems extends Component {
             selectedType: this.state.selectedType
         }
         this.props.itemAdded(item);
+
     }
 
     onFormReset(e) {
         e.preventDefault();
-        this.setState ({
+        this.setState({
             id: Math.random().toString(36).substr(2, 9),
             itemName: '',
             quantity: '1',
@@ -53,59 +54,63 @@ export default class AddItems extends Component {
         return (
             <div>
                 <form onSubmit={this.onFormSubmit}>
-                    <div className='addItemsToBasket'>
-                        <h1> Add Grocery Items </h1>
-                    </div>
-                    <div>
-                        <label> Item Name: </label>
-                        <input
-                            type='text'
-                            name='itemName'
-                            placeholder='Enter item name'
-                            onChange={this.handleChanges}
-                            value={this.state.itemName} required />
-                    </div>
-                    <div>
-                        <label> Item Quantity: </label>
-                        <input
-                            type='number'
-                            step='1'
-                            name='quantity'
-                            value={this.state.quantity}
-                            onChange={this.handleChanges}
-                            placeholder='Item quantity' />
-                    </div>
+                    <fieldset>
+                        <legend className='header-text'> Add Grocery Items </legend>
+                        <div className='item-name'>
+                            <label className='item-name-text'> Item Name: </label>
+                            <input
+                                type='text'
+                                name='itemName'
+                                className='item-name-value'
+                                placeholder='Enter item name'
+                                onChange={this.handleChanges}
+                                value={this.state.itemName} required />
+                        </div>
+                        <div className='item-quantity'>
+                            <label className='item-quantity-text'> Item Quantity: </label>
+                            <input
+                                type='number'
+                                step='1'
+                                name='quantity'
+                                className='item-quantity-value'
+                                value={this.state.quantity}
+                                onChange={this.handleChanges}
+                                placeholder='Item quantity' />
+                        </div>
 
-                    <p className="category">Please select Item Category</p>
-                    <ul>
-                        <li>
-                            <label>
-                                <input
-                                    type="radio"
-                                    name='selectedType'
-                                    value="common"
-                                    checked={this.state.selectedType === "common"}
-                                    onChange={this.handleChanges} /> Common Item
-                        </label>
-                        </li>
+                        <p className="item-category-text">Please select Item Category</p>
+                        <ul className='category-list'>
+                            <li className='category-entry'>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name='selectedType'
+                                        value="common"
+                                        className='catergory-name'
+                                        checked={this.state.selectedType === "common"}
+                                        onChange={this.handleChanges} /> Common Item
+                                </label>
+                            </li>
 
-                        <li>
-                            <label>
-                                <input
-                                    type="radio"
-                                    name='selectedType'
-                                    value="separate"
-                                    checked={this.state.selectedType === "separate"}
-                                    onChange={this.handleChanges} /> Separate Item
-                        </label>
-                        </li>
-                    </ul>
+                            <li className='category-entry'>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name='selectedType'
+                                        value="separate"
+                                        className='category-name'
+                                        checked={this.state.selectedType === "separate"}
+                                        onChange={this.handleChanges} /> Separate Item
+                                </label>
+                            </li>
+                        </ul>
 
-                    <button type="submit"
-                        className="submit-button"> Add To Basket </button>
-                    <button 
+                        <button type="submit"
+                            className="add-to-basket"> Add To Basket </button>
+                        <button
                             onClick={this.onFormReset}
-                            className="reset-button"> Reset </button>
+                            className="reset-basket"> Reset </button>
+                    </fieldset>
                 </form>
                 {/* <pre>
                     <code>

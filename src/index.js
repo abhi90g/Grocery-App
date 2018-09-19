@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import AddItems from './components/add-items';
 import ItemBasket from './components/item-basket';
-// import './styles/scss/App.scss';
+import './styles/css/App.css';
 
 class App extends Component {
     constructor(props) {
@@ -36,8 +36,10 @@ class App extends Component {
 
     render() {
         let listItems = this.state.itemList
+        console.log(listItems);
+        console.log(JSON.stringify(listItems));
         return (
-            <div>
+            <div className='container'>
                 <AddItems
                     itemAdded={this.itemAdded} />
                 <ItemBasket

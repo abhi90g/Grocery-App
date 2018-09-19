@@ -1,0 +1,20 @@
+button {
+    border-radius: 5px;
+}
+
+.add-to-basket {
+    width: 40%;
+    height: 35px;
+    &:hover {
+        background-color: $green;
+    }
+}
+
+.reset-basket{
+    height: 35px;
+    margin-left: 10px;
+    width: 10%;
+    &:hover {
+        background-color: $red;
+    }
+}

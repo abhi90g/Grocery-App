@@ -9,8 +9,8 @@ const Row = (props) => {
 
 
     return (
-        <tr>
-            <td>
+        <tr className='items'>
+            <td className='item-detail'>
                 <ul>
                     <li>
                         Name: {props.rowItem.itemName}
@@ -19,12 +19,12 @@ const Row = (props) => {
                         Quantity: {props.rowItem.quantity}
                     </li>
                     <li>
-                        Category: {props.rowItem.selectedType}
+                        Category: {(props.rowItem.selectedType === 'common') ? 'Common Item' : 'Separate Item'}
                     </li>
                 </ul>
             </td>
             <td>
-                <button onClick={removeItem} > Remove </button>
+                <button onClick={removeItem} className='item-remove' > Remove </button>
             </td>
         </tr>
     )
