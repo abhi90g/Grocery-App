@@ -6,10 +6,10 @@ export default class AddItems extends Component {
         super(props);
 
         this.state = {
-            id: Math.random().toString(36).substr(2, 9),
-            itemName: '',
+            id: '',
+            itemName: 'Apple',
             quantity: '1',
-            selectedType: ''
+            selectedType: 'common'
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -29,7 +29,14 @@ export default class AddItems extends Component {
 
     onFormSubmit(e) {
         e.preventDefault();
-        console.log(this.props.itemAdded(this.state));
+
+        let item = {
+            id: Math.random().toString(36).substr(2, 9),
+            itemName: this.state.itemName,
+            quantity: this.state.quantity,
+            selectedType: this.state.selectedType
+        }
+        this.props.itemAdded(item);
     }
 
     onFormReset(e) {

@@ -7,21 +7,42 @@ import ItemBasket from './components/item-basket';
 class App extends Component {
     constructor(props) {
         super(props);
-        console.log(props)
+
+        this.state = {
+            itemList: {}
+        }
+        this.itemAdded = this.itemAdded.bind(this);
+        this.removeSingleItem = this.removeSingleItem.bind(this);
     }
 
     itemAdded(item) {
-
-        console.log('item - ', item);
+        let items = this.state.itemList;
+        this.state.itemList[item.id] = item;
+        this.itemsInList(items);
     }
 
+    itemsInList(list) {
+        this.setState({
+            itemList: list
+        });
+    }
+
+    removeSingleItem (itemId) {    
+        let list = this.state.itemList;
+        // console.log('removeSingleItem - ', list[itemId]);
+        delete list[itemId];
+        this.itemsInList(list);
+      }
+
     render() {
-        console.log(this.props);
+        let listItems = this.state.itemList
         return (
             <div>
                 <AddItems
-                    itemAdded = {this.itemAdded} />
-                <ItemBasket />
+                    itemAdded={this.itemAdded} />
+                <ItemBasket
+                    itemList={listItems}
+                    removeSingleItem={this.removeSingleItem} />
             </div>
         )
     }
