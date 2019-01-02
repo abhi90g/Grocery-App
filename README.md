@@ -15,4 +15,7 @@ To Run:
 `npm start`  
      
   
-For this app No scaffolding tools such as 'create-react-app' is used. Also no 'npm eject' on this. Using `style-loader` and `css-loader` I'm converting saas to css through `sass --watch src/styles/scss:src/styles/css`. This also required respective loaders in the webpack.config.js
+For this app No scaffolding tools such as 'create-react-app' is used. Also no 'npm eject' on this. Using `style-loader` and `css-loader` I'm converting saas to css through `sass --watch src/styles/scss:src/styles/css`. This also required respective loaders in the webpack.config.js  
+  
+## Live Version 
+<a target="_blank" href="https://abhi90g.github.io/grocery-app/"> Grocery App </a> 
